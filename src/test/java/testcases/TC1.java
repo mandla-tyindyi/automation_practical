@@ -17,7 +17,7 @@ public class TC1 extends BaseClass{
 	
 	@Test
 	public static void TestCase1(){
-		System.out.println("Inside test");
+		System.out.println("The path is: "+System.getProperty("user.dir"));
 	}
 
 }

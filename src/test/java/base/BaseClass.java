@@ -12,13 +12,12 @@ import utilities.Constants;
 public class BaseClass {
 	
 	public static WebDriver driver;
-    String URL = "http://automationpractice.com/";
 	
 	@BeforeTest
 	public void setup(){
 		WebDriverManager.chromedriver().setup();
 	    driver = new ChromeDriver();
-	    driver.get(URL);
+	    driver.get(Constants.URL);
 	    driver.manage().window().maximize();     
     }
 	
