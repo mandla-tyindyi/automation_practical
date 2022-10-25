@@ -10,6 +10,7 @@ import java.io.File;
 import java.nio.file.FileStore;
 import java.nio.file.Files;
 import java.sql.Timestamp;
+import java.time.Duration;
 import java.util.Date;
 import java.util.Random;
 import org.openqa.selenium.JavascriptExecutor;
@@ -26,7 +27,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  *
  */
 
-public class Utilities {
+public class Utility {
 	Random rand;
 	 /**
      * Functions to be used in the test 
@@ -40,7 +41,7 @@ public class Utilities {
             elementFound = false;
             while(elementFound != true)
             {
-                WebDriverWait wait = new WebDriverWait(driver, null);
+                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
                 while(wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xPath)))!=null)
                 {
                     elementFound = true;
@@ -82,7 +83,7 @@ public class Utilities {
         {
             System.out.println("INFO: Clicking element by Xpath : " + elementXpath);
             waitForElement(elementXpath,driver);
-            WebDriverWait wait = new WebDriverWait(driver, null);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath(elementXpath)));
             WebElement elementToClick = driver.findElement(By.xpath(elementXpath));
             elementToClick.click();

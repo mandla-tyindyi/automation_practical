@@ -9,20 +9,23 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 import utilities.Constants;
 
-public class BaseClass {
+public class BaseClass 
+{
 	
 	public static WebDriver driver;
 	
 	@BeforeTest
-	public void setup(){
+	public void setup()
+	{
 		WebDriverManager.chromedriver().setup();
 	    driver = new ChromeDriver();
 	    driver.get(Constants.URL);
-	    driver.manage().window().maximize();     
+	    driver.manage().window().maximize();    
     }
 	
 	@AfterTest
-	public void teardown(){
+	public void teardown()
+	{
 		driver.close();
 		driver.quit();
 	}
