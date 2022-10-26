@@ -6,9 +6,10 @@ package utilities;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 
+import java.io.BufferedReader;
 import java.io.File;
-import java.nio.file.FileStore;
-import java.nio.file.Files;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Timestamp;
 import java.time.Duration;
 import java.util.Date;
@@ -19,6 +20,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -129,6 +131,38 @@ public class Utility {
         }
     }
     
+    public String getTextFromAnElement(WebDriver driver, String elementXpath)
+	{
+		waitForElement(elementXpath, driver);
+		WebElement element =driver.findElement(By.xpath(elementXpath));
+		String elementText = element.getText();
+		
+		return elementText;
+	}
+    
+    public String getValueFromAnAttribute(WebDriver driver, String elementXpath)
+	{
+		waitForElement(elementXpath, driver);
+		WebElement element =driver.findElement(By.xpath(elementXpath));
+		String attributeValue = element.getAttribute("value");
+		
+		return attributeValue;
+	}
+    
+    
+    public void hoverOverAnElement(WebDriver driver, String elementXpath)
+	{
+    	Actions action = new Actions(driver);
+		WebElement btn = driver.findElement(By.xpath(elementXpath));
+		action.moveToElement(btn).perform();
+	}
+    
+    public void clearTextFromATextField(WebDriver driver, String elementXpath)
+   	{
+    	WebElement element = driver.findElement(By.xpath(elementXpath));
+    	element.clear();
+   	}
+    
     public boolean selectRadioButtonUsingElementXpath(String radioButtonXpath, WebDriver driver)
     {
         try
@@ -143,6 +177,42 @@ public class Utility {
             return false;
         }
         return true;
+    }
+    
+    public String readFromATextFile(String os) throws IOException 
+    {
+    	
+    	String fileName = getFilePath(os);
+    	File file = new File(fileName);
+    	FileReader fr = new FileReader(file);
+    	BufferedReader br = new BufferedReader(fr);
+    	String line;
+    	String results=null;
+    	while((line = br.readLine()) != null){
+    	    results = line;
+    	}
+    	
+    	br.close();    
+        fr.close(); 
+
+    	return results;
+    }
+    
+    public String getFilePath(String os) throws IOException 
+    {
+    	String userDirectory = System.getProperty("user.dir");
+    	String filePath = null;
+    	
+    	if(os.contains("Linux")) 
+    	{
+    		filePath = userDirectory+"/src/test/resources/testdata/sourcefile.txt";
+    	}
+    	else if(os.contains("Windows")) 
+    	{
+    		filePath = userDirectory+"\\src\\test\\resources\\testdata\\sourcefile.txt";
+    	}
+    	
+    	return filePath;
     }
     
     public String switchToNewWindow(WebDriver driver)
@@ -165,7 +235,7 @@ public class Utility {
     
     public void pause(){
         try{
-            Thread.sleep(3000);
+            Thread.sleep(5000);
         }catch (InterruptedException e) {
             e.printStackTrace();
         }

@@ -3,9 +3,7 @@
  */
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import utilities.Utility;
 
@@ -31,15 +29,21 @@ public class HomePage
 		driverUtil.clickElementbyXpath(this.searchIconXpath(), driver);
 	}
 	
-	public String getTextFromFirstResult(WebDriver driver)
+	public void reusableSearchOnTheHomePage(WebDriver driver, String textToSearch)
 	{
-		driverUtil.waitForElement(this.searchFirstResultXpath(), driver);
-		WebElement element =driver.findElement(By.xpath(this.searchFirstResultXpath()));
-		String elementText = element.getText();
-		
-		return elementText;
+		driverUtil.waitForElement(this.searchFieldXpath(), driver);
+		driverUtil.enterTextByXpath(this.searchFieldXpath(), driver, textToSearch);
+		driverUtil.waitForElement(this.searchIconXpath(), driver);
+		driverUtil.clickElementByJavascriptExecutor(this.searchIconXpath(), driver);
+		driverUtil.clickElementbyXpath(this.searchIconXpath(), driver);
 	}
 	
+	public String getTextFromFirstResult(WebDriver driver)
+	{
+		
+		return driverUtil.getTextFromAnElement(driver, this.searchFirstResultXpath());
+		
+	}
 	
 	public String searchFieldXpath() 
 	{
