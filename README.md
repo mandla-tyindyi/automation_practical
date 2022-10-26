@@ -2,8 +2,8 @@
 
 ##TOOLS
 
-Selenium WebDriver
-Java
-Maven
-TestNG
+Selenium WebDriver,
+Java, 
+Maven, 
+TestNG, 
 Eclipse
