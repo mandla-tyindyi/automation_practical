@@ -34,8 +34,8 @@ public class TC6 extends BaseClass
         Assert.assertEquals(headerTextOnTshirtsCategory, "T-SHIRTS ");
         
         genereicpage.hoverOverMainCategoryAndSelectSubcategory(driver, "Women", "Tops");
-		String headerTextOnTops = genereicpage.topsLandingPageXpath();
-		Assert.assertEquals(headerTextOnTops, "TOPS");
+		String headerTextOnTops = genereicpage.getTextFromAnElement(driver, genereicpage.topsLandingPageXpath());
+		Assert.assertEquals(headerTextOnTops, "TOPS ");
 
 	}
 

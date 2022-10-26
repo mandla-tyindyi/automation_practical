@@ -55,6 +55,10 @@ public class GenericPage
 		return value;
 	}
 	
+	public String getTextFromAnElement(WebDriver driver, String elementXpath)
+	{		
+		return driverUtil.getTextFromAnElement(driver, elementXpath);
+	}
 	
 	public void hoverOverMainCategoryAndSelectSubcategory(WebDriver driver, String category, String subcategory)
 	{
