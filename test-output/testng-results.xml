@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-26T09:28:53 SAST" name="Default suite" finished-at="2022-10-26T09:28:58 SAST" duration-ms="4756">
+  <suite started-at="2022-10-26T10:01:22 SAST" name="Default suite" finished-at="2022-10-26T10:01:36 SAST" duration-ms="14124">
     <groups>
     </groups>
-    <test started-at="2022-10-26T09:28:53 SAST" name="Default test" finished-at="2022-10-26T09:28:58 SAST" duration-ms="4756">
+    <test started-at="2022-10-26T10:01:22 SAST" name="Default test" finished-at="2022-10-26T10:01:36 SAST" duration-ms="14124">
       <class name="testcases.TC6">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.TC6@702657cc]" started-at="2022-10-26T09:28:53 SAST" name="setup" finished-at="2022-10-26T09:28:55 SAST" duration-ms="2086" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.TC6@702657cc]" started-at="2022-10-26T10:01:22 SAST" name="setup" finished-at="2022-10-26T10:01:32 SAST" duration-ms="9908" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="TestCase6()[pri:0, instance:testcases.TC6@702657cc]" started-at="2022-10-26T09:28:55 SAST" name="TestCase6" finished-at="2022-10-26T09:28:58 SAST" duration-ms="2622" status="FAIL">
+        <test-method signature="TestCase6()[pri:0, instance:testcases.TC6@702657cc]" started-at="2022-10-26T10:01:32 SAST" name="TestCase6" finished-at="2022-10-26T10:01:36 SAST" duration-ms="4167" status="FAIL">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[chrome not reachable
@@ -19,9 +19,9 @@
 Build info: version: '4.5.2', revision: '702c64f787c'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-50-generic', java.version: '11.0.16'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a5bfa6e95c142e42567aa9c2b06de121, findElement {using=xpath, value=//h2[contains(text(),'Women')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /tmp/.com.google.Chrome.ZQ8Ts7}, goog:chromeOptions: {debuggerAddress: localhost:38559}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:38559/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a5bfa6e95c142e42567aa9c2b06de121]]>
+Command: [b9a700b6ac3f20d09005c8a490b949f0, findElement {using=xpath, value=//div[text()='Categories']/../ul/li/a[text()='Women']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /tmp/.com.google.Chrome.vF90Yv}, goog:chromeOptions: {debuggerAddress: localhost:45099}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:45099/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b9a700b6ac3f20d09005c8a490b949f0]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
@@ -29,9 +29,9 @@ Session ID: a5bfa6e95c142e42567aa9c2b06de121]]>
 Build info: version: '4.5.2', revision: '702c64f787c'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-50-generic', java.version: '11.0.16'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a5bfa6e95c142e42567aa9c2b06de121, findElement {using=xpath, value=//h2[contains(text(),'Women')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /tmp/.com.google.Chrome.ZQ8Ts7}, goog:chromeOptions: {debuggerAddress: localhost:38559}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:38559/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a5bfa6e95c142e42567aa9c2b06de121
+Command: [b9a700b6ac3f20d09005c8a490b949f0, findElement {using=xpath, value=//div[text()='Categories']/../ul/li/a[text()='Women']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /tmp/.com.google.Chrome.vF90Yv}, goog:chromeOptions: {debuggerAddress: localhost:45099}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:45099/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b9a700b6ac3f20d09005c8a490b949f0
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -47,9 +47,10 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at utilities.Utility.getTextFromAnElement(Utility.java:137)
-at pages.GenericPage.getTextFromAnElementInAPage(GenericPage.java:44)
-at testcases.TC6.TestCase6(TC6.java:26)
+at utilities.Utility.hoverOverAnElement(Utility.java:156)
+at pages.GenericPage.hoverOverMainCategory(GenericPage.java:71)
+at pages.GenericPage.hoverOverMainCategoryAndSelectSubcategory(GenericPage.java:62)
+at testcases.TC6.TestCase6(TC6.java:37)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -84,7 +85,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase6 -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.TC6@702657cc]" started-at="2022-10-26T09:28:58 SAST" name="teardown" finished-at="2022-10-26T09:28:58 SAST" duration-ms="5" status="FAIL">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.TC6@702657cc]" started-at="2022-10-26T10:01:36 SAST" name="teardown" finished-at="2022-10-26T10:01:36 SAST" duration-ms="5" status="FAIL">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[chrome not reachable
@@ -92,9 +93,9 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 Build info: version: '4.5.2', revision: '702c64f787c'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-50-generic', java.version: '11.0.16'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a5bfa6e95c142e42567aa9c2b06de121, close {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /tmp/.com.google.Chrome.ZQ8Ts7}, goog:chromeOptions: {debuggerAddress: localhost:38559}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:38559/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a5bfa6e95c142e42567aa9c2b06de121]]>
+Command: [b9a700b6ac3f20d09005c8a490b949f0, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /tmp/.com.google.Chrome.vF90Yv}, goog:chromeOptions: {debuggerAddress: localhost:45099}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:45099/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b9a700b6ac3f20d09005c8a490b949f0]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
@@ -102,9 +103,9 @@ Session ID: a5bfa6e95c142e42567aa9c2b06de121]]>
 Build info: version: '4.5.2', revision: '702c64f787c'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-50-generic', java.version: '11.0.16'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a5bfa6e95c142e42567aa9c2b06de121, close {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /tmp/.com.google.Chrome.ZQ8Ts7}, goog:chromeOptions: {debuggerAddress: localhost:38559}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:38559/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a5bfa6e95c142e42567aa9c2b06de121
+Command: [b9a700b6ac3f20d09005c8a490b949f0, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /tmp/.com.google.Chrome.vF90Yv}, goog:chromeOptions: {debuggerAddress: localhost:45099}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:45099/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b9a700b6ac3f20d09005c8a490b949f0
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)

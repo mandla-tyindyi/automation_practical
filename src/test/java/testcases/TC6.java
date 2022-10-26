@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 import base.BaseClass;
 import pages.GenericPage;
 import pages.HomePage;
-import utilities.Constants;
 
 /**
  * @author mandla.tyindyi
@@ -32,13 +31,11 @@ public class TC6 extends BaseClass
         
         genereicpage.navigateToEachCategory(driver, "T-Shirts");
 		String headerTextOnTshirtsCategory = genereicpage.getTextFromAnElementInAPage(driver, "T-Shirts");
-        Assert.assertEquals(headerTextOnTshirtsCategory, "T-SHIRTS");
-        
-        genereicpage.hoverOverMainCategory(driver, "Women");
-        genereicpage.hoverOverMainCategory(driver, "Dresses");
-        genereicpage.hoverOverMainCategory(driver, "T-Shirts");
+        Assert.assertEquals(headerTextOnTshirtsCategory, "T-SHIRTS ");
         
         genereicpage.hoverOverMainCategoryAndSelectSubcategory(driver, "Women", "Tops");
+		String headerTextOnTops = genereicpage.topsLandingPageXpath();
+		Assert.assertEquals(headerTextOnTops, "TOPS");
 
 	}
 

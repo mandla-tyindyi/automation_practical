@@ -59,7 +59,7 @@ public class GenericPage
 	public void hoverOverMainCategoryAndSelectSubcategory(WebDriver driver, String category, String subcategory)
 	{
 		
-		hoverOverMainCategory(driver, subcategory);
+		hoverOverMainCategory(driver, category);
 		driverUtil.clickElementbyXpath(this.subCategoriesGenericXpath(subcategory), driver);
 			
 	}
@@ -110,6 +110,11 @@ public class GenericPage
 	public String tShirtsCategoryXpath() 
 	{
 		return "//h1//span[contains(text(),'T-shirts')]";
+	}
+	
+	public String topsLandingPageXpath() 
+	{
+		return "//h1//span[contains(text(),'Tops')]";
 	}
 	
 	public String searchFirstResultXpath() 
